@@ -1,10 +1,10 @@
 #!/bin/bash
-if [ ! -f virtuoso-opensource-6.1.8.zip ]; then
-    wget https://github.com/openlink/virtuoso-opensource/archive/v6.1.8.zip -O virtuoso-opensource-6.1.8.zip
+if [ ! -f virtuoso-opensource-7.2.0.1.zip ]; then
+    wget https://github.com/openlink/virtuoso-opensource/archive/stable/7.zip -O virtuoso-opensource-7.2.0.1.zip
 fi
-unzip virtuoso-opensource-6.1.8.zip
+unzip virtuoso-opensource-7.2.0.1.zip
 mkdir virtuoso
-cd virtuoso-opensource-6.1.8
+cd virtuoso-opensource-stable-7
 ./autogen.sh
 ./configure --prefix=/home/virtuoso/virtuoso
 make
