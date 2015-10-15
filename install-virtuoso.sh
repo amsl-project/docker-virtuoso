@@ -1,10 +1,15 @@
 #!/bin/bash
-if [ ! -f virtuoso-opensource-7.2.0.1.zip ]; then
-    wget https://github.com/openlink/virtuoso-opensource/archive/stable/7.zip -O virtuoso-opensource-7.2.0.1.zip
+
+VMAJOR=7
+VMINOR=2
+VBUG=1
+
+if [ ! -f virtuoso-opensource-virtuoso-opensource-${VMAJOR}.${VMINOR}.${VBUG}.tar.gz ]; then
+    wget https://github.com/openlink/virtuoso-opensource/releases/download/v${VMAJOR}.${VMINOR}.${VBUG}/virtuoso-opensource-${VMAJOR}.${VMINOR}.${VBUG}.tar.gz
 fi
-unzip virtuoso-opensource-7.2.0.1.zip
+tar -xzf virtuoso-opensource-${VMAJOR}.${VMINOR}.${VBUG}.tar.gz
 mkdir virtuoso
-cd virtuoso-opensource-stable-7
+cd virtuoso-opensource-${VMAJOR}.${VMINOR}.${VBUG}
 ./autogen.sh
 ./configure --prefix=/home/virtuoso/virtuoso
 make
