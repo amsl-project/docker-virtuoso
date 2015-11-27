@@ -26,5 +26,5 @@ RUN su - virtuoso -c "/home/virtuoso/install-virtuoso.sh"
 
 EXPOSE 8890 1111
 USER virtuoso
-CMD  /home/virtuoso/virtuoso/bin/virtuoso-t -f -c /home/virtuoso/virtuoso/var/lib/virtuoso/db/virtuoso.ini
+CMD /home/virtuoso/virtuoso/bin/virtuoso-t -f -c /home/virtuoso/virtuoso/var/lib/virtuoso/db/virtuoso.ini
 

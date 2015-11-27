@@ -4,7 +4,7 @@ VMAJOR=7
 VMINOR=2
 VBUG=1
 
-if [ ! -f virtuoso-opensource-virtuoso-opensource-${VMAJOR}.${VMINOR}.${VBUG}.tar.gz ]; then
+if [ ! -f virtuoso-opensource-${VMAJOR}.${VMINOR}.${VBUG}.tar.gz ]; then
     wget https://github.com/openlink/virtuoso-opensource/releases/download/v${VMAJOR}.${VMINOR}.${VBUG}/virtuoso-opensource-${VMAJOR}.${VMINOR}.${VBUG}.tar.gz
 fi
 tar -xzf virtuoso-opensource-${VMAJOR}.${VMINOR}.${VBUG}.tar.gz
